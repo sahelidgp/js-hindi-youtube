@@ -49,3 +49,6 @@ console.log(typeof null)
 console.log(typeof undefined);
 console.log(typeof myFunction);
 console.log(typeof heroes)
+
+//link for further reading 
+//https://262.ecma-international.org/5.1/#sec-11.4.3
