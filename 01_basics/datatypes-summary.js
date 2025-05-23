@@ -11,44 +11,74 @@
 // A variable can hold any type of value at different times:
 
 
-let x = 10;      // x is a number
-x = "hello";     // now x is a string
-x = true;        // now x is a boolean
+// let x = 10;      // x is a number
+// x = "hello";     // now x is a string
+// x = true;        // now x is a boolean
 
-const score = 100
-const scoreValue = 100.3
+// const score = 100
+// const scoreValue = 100.3
 
-const isLoggedIn = false
-const outsideTemp = null
-let userEmail;
+// const isLoggedIn = false
+// const outsideTemp = null
+// let userEmail;
 
-const id = Symbol('123')
-const anotherId = Symbol('123')
+// const id = Symbol('123')
+// const anotherId = Symbol('123')
 
-const bigNumber = 2345678909876234564567890098765n;
-console.log(typeof bigNumber);
+// const bigNumber = 2345678909876234564567890098765n;
+// console.log(typeof bigNumber);
 
-//Reference (Non Primitive)
+// //Reference (Non Primitive)
 
-//Array,Objects,Functions
+// //Array,Objects,Functions
 
-const heroes = ["shaktiman","naagraj","doga"];
+// const heroes = ["shaktiman","naagraj","doga"];
 
-let myObj = {
-    name:"hitesh",
-    age:22,
-}
+// let myObj = {
+//     name:"hitesh",
+//     age:22,
+// }
 
-const myFunction = function(){
-    console.log("hello world\n")
-}
-myFunction();
+// const myFunction = function(){
+//     console.log("hello world\n")
+// }
+// myFunction();
 
-console.log(typeof outsideTemp)
-console.log(typeof null)
-console.log(typeof undefined);
-console.log(typeof myFunction);
-console.log(typeof heroes)
+// console.log(typeof outsideTemp)
+// console.log(typeof null)
+// console.log(typeof undefined);
+// console.log(typeof myFunction);
+// console.log(typeof heroes)
 
 //link for further reading 
 //https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+//++++++++++++++   Memory   ++++++++++++++++++++++++
+
+//stack (Primitive) , Heap(Non-primitive)
+
+let myYoutubename = "hietshchoudharydotcom"
+
+let anotherName = myYoutubename
+console.log(anotherName)
+console.log(myYoutubename)
+
+console.log("\n////////////++++++++++++++++++++++++++++++++++++\\\\\\\\\\\\\\\\\n")
+
+anotherName = "chaiaurcode"
+console.log(anotherName)
+console.log(myYoutubename)
+
+let userOne = {
+    email : "user@google.com",
+    upi:"user@ybl",
+
+}
+let userTwo = userOne;
+console.log(userTwo.email);
+userTwo.email = "hitesh@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
