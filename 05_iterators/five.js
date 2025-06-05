@@ -23,6 +23,7 @@ function printMe(item){
 coding.forEach( (item,index,arr) => {
    // console.log(item, index,arr);
 })
+// array of objects
 const myCoding = [
     {
         languageName: "javascript",
@@ -37,7 +38,7 @@ const myCoding = [
         languageFileName: "java"
     },
 ]
-
+//for iterating in object
 myCoding.forEach( (item) => {
     console.log(item.languageFileName);
     console.log(item.languageName);
