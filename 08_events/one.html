@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #5a4f55;color: rgb(214, 217, 219); ">
+    <h2>Amazing images</h2>
+    <ul id="images">
+        <li><img width= "200px" id ="owl" src="https://media.istockphoto.com/id/493171779/photo/owl.jpg?s=612x612&w=0&k=20&c=8eUzfc-Zb3MqIwifANJZf7dqtlJZwL3koCsfVW3-PS8=" alt="owl"></li>
+        <li><a href="https://www.google.com" id="google" style="color: burlywood;">Google</a>
+</li>
+        <li><img src="https://images.stockcake.com/public/d/2/8/d289ec1f-7dfc-41ff-97b3-8b9636c2d760_large/peacock-displays-feathers-stockcake.jpg" alt="peacock"></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){  //less feasible
+    //     alert("owl clicked")  
+    // }
+
+    //attachEvent()
+    //jQuery - on
+
+    // types , timestamp , defaultPrevented
+// target, toElement, srcElement, currentTarget,
+// clientX, clientY, screenX, screenY
+// altkey, ctrlkey, shiftkey , keyCode
+
+
+//EVent propagation 
+//bubbling->false      capturing->true
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log(" clicked inside the ul")
+    // },false)
+//     document.getElementById('owl').addEventListener('click',function(e){
+//         console.log(e);
+// },true) 
+
+//     document.getElementById('owl').addEventListener('click',function(e){
+//         console.log("owl clicked")
+//         e.stopPropagation() //to stop bubbling
+//     },false)
+
+//   document.getElementById('google').addEventListener('click', function(e){
+//     e.preventDefault(); // Prevent navigation
+//     e.stopPropagation(); // Stop bubbling
+//     console.log("google clicked");
+//     // Optional: window.location.href = e.target.dataset.href;  // manual redirect
+// }, false);
+
+document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+    let removeIt = e.target.parentNode; // target = image parentnode ->li    removeIt =>
+    removeIt.remove()
+    //removeIt.parentNode.removeChild(removeIt);
+    }
+})
+</script>
+</html>

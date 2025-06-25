@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #382c2c;color: azure;">
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id ="stop">Stop</button>
+    
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str,new Date().toLocaleTimeString());
+        console.log('started')
+    }
+     let intervalID ;
+
+    document.querySelector('#start').addEventListener('click',function(){
+     intervalID = setInterval(sayDate,1000,"saheli")
+
+    })
+
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(intervalID);
+        console.log('cleared')
+    })
+
+
+</script>
+</html>
