@@ -1,6 +1,6 @@
 # js-hindi-youtube
 A code repo for JavaScript series at Chai aur Code Youtube channel
-
+<!--
 document.querySelector('h2')
 <h2>​Lorem ipsum dolor sit.​</h2>​
 document.querySelector('h2')
